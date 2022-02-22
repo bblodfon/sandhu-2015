@@ -21,6 +21,7 @@ miRNA_files = list.files(path = miRNA_dir, full.names = T)
 # miRNA_data = readr::read_tsv(file = miRNA_files[1], skip = 9, col_select = 2:last_col())
 # mRNA_data  = readr::read_tsv(file = mRNA_files[1], skip = 9, col_select = 1:last_col())
 
+# More like ids for the patients, i.e. `PDAC_2`, `Duodenum_5`, `ampullaI_3`
 mRNA_filenames  = stringr::str_match(base::basename(mRNA_files), "_(.*).txt")[,2]
 miRNA_filenames = stringr::str_match(base::basename(miRNA_files), "_(.*).txt")[,2]
 
